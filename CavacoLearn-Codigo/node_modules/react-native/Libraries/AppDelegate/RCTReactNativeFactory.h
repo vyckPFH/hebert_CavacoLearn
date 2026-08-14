@@ -1,0 +1,91 @@
+/*
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+#import <React/RCTBridgeDelegate.h>
+#import <React/RCTConvert.h>
+#import <UIKit/UIKit.h>
+#import "RCTDependencyProvider.h"
+#import "RCTJSRuntimeConfiguratorProtocol.h"
+#import "RCTRootViewFactory.h"
+#import "RCTUIConfiguratorProtocol.h"
+
+#if defined(__cplusplus) // Don't conform to protocols requiring C++ when it's not defined.
+#import <React/RCTComponentViewFactory.h>
+#import <ReactCommon/RCTHost.h>
+#import <ReactCommon/RCTTurboModuleManager.h>
+
+#endif
+
+@class RCTBridge;
+@protocol RCTComponentViewProtocol;
+@class RCTSurfacePresenterBridgeAdapter;
+@class RCTBundleConfiguration;
+@class RCTDevMenuConfiguration;
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(NSInteger, RCTReleaseLevel) { Canary, Experimental, Stable };
+
+@protocol RCTReactNativeFactoryDelegate <
+    RCTBridgeDelegate,
+    RCTUIConfiguratorProtocol,
+#if defined(__cplusplus) // Don't conform to protocols requiring C++ when it's not defined.
+    RCTHostDelegate,
+    RCTTurboModuleManagerDelegate,
+    RCTComponentViewFactoryComponentProvider,
+#endif
+    RCTJSRuntimeConfiguratorProtocol>
+
+/// Return the bundle URL for the main bundle.
+- (NSURL *__nullable)bundleURL;
+
+@property (nonatomic, strong) id<RCTDependencyProvider> dependencyProvider;
+
+@optional
+/// This method returns a map of Component Descriptors and Components classes that needs to be registered in the
+/// new renderer. The Component Descriptor is a string which represent the name used in JS to refer to the native
+/// component. The default implementation returns an empty dictionary. Subclasses can override this method to register
+/// the required components.
+///
+/// @return a dictionary that associate a component for the new renderer with his descriptor.
+- (NSDictionary<NSString *, Class<RCTComponentViewProtocol>> *)thirdPartyFabricComponents;
+
+@end
+
+@interface RCTReactNativeFactory : NSObject
+
+- (instancetype)initWithDelegate:(id<RCTReactNativeFactoryDelegate>)delegate;
+
+- (instancetype)initWithDelegate:(id<RCTReactNativeFactoryDelegate>)delegate releaseLevel:(RCTReleaseLevel)releaseLevel;
+
+- (void)startReactNativeWithModuleName:(NSString *)moduleName inWindow:(UIWindow *_Nullable)window;
+
+- (void)startReactNativeWithModuleName:(NSString *)moduleName
+                              inWindow:(UIWindow *_Nullable)window
+                         launchOptions:(NSDictionary *_Nullable)launchOptions;
+
+- (void)startReactNativeWithModuleName:(NSString *)moduleName
+                              inWindow:(UIWindow *_Nullable)window
+                     initialProperties:(NSDictionary *_Nullable)initialProperties
+                         launchOptions:(NSDictionary *_Nullable)launchOptions;
+
+#if !defined(RCT_REMOVE_LEGACY_ARCH)
+@property (nonatomic, nullable) RCTSurfacePresenterBridgeAdapter *bridgeAdapter __attribute__((
+    deprecated("The bridgeAdapter is deprecated and will be removed when removing the legacy architecture.")));
+#endif
+
+@property (nonatomic, strong, nonnull) RCTRootViewFactory *rootViewFactory;
+
+@property (nonatomic, weak) id<RCTReactNativeFactoryDelegate> delegate;
+
+@property (nonatomic, strong, nonnull) RCTBundleConfiguration *bundleConfiguration;
+
+@property (nonatomic, nullable) RCTDevMenuConfiguration *devMenuConfiguration;
+
+@end
+
+NS_ASSUME_NONNULL_END
