@@ -18,10 +18,9 @@
 | RF014 | Concluir Exercício | Registra a conclusão do exercício. |
 | RF015 | Visualizar Missões | Exibe as missões a serem concluídas. |
 | RF016 | Resgatar Pontos | Permite coletar pontos das missões. |
-| RF017 | Realizar Download | Permite o download de tópicos, exercícios e músicas. |
-| RF018 | Visualizar Músicas | Exibe as músicas desbloqueadas pelo usuário. |
-| RF019 | Estudar Música | Permite acessar o conteúdo de uma música. |
-| RF020 | Visualizar Progresso | Exibe o progressso do usuário no curso. |
-| RF021 | Visualizar Pontuação | Exibe a pontuação acumulada pelo usuário. |
-| RF022 | Definir Ordem dos Itens | Permite definir a ordem dos tópicos e exercícios em um nível. |
-| RF023 | Visualizar usuários | Exibe todos os usuários cadastrados no sistema. |
+| RF017 | Visualizar Músicas | Exibe as músicas desbloqueadas pelo usuário. |
+| RF018 | Estudar Música | Permite acessar o conteúdo de uma música. |
+| RF019 | Visualizar Progresso | Exibe o progressso do usuário no curso. |
+| RF020 | Visualizar Pontuação | Exibe a pontuação acumulada pelo usuário. |
+| RF021 | Definir Ordem dos Itens | Permite definir a ordem dos tópicos e exercícios em um nível. |
+| RF022 | Visualizar usuários | Exibe todos os usuários cadastrados no sistema. |
