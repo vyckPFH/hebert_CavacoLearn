@@ -14,6 +14,6 @@ CavacoLearn/
     ├── telas/         - telas completas do app (paths de navegação)
     ├── types/         - camada de infraestrutura e comunicação externa (DTOs, interfaces, tipos de dados)
     ├── utils/         - funções utilitárias (helpers, formatações, etc.)
-    └── 
+    └── ...
 
 ```
