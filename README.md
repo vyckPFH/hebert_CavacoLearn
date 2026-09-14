@@ -17,3 +17,7 @@ CavacoLearn/
     └── ...
 
 ```
+
+npm install
+
+

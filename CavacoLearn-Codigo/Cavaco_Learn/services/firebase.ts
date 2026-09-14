@@ -1,10 +1,10 @@
 // src/services/firebaseConfig.ts
 
 // 1. Importamos as funções necessárias do SDK
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { Platform } from 'react-native';
-import { initializeFirestore } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app'; //cria a coneção inicial com os servidores do Firebase , é a RAIZ de tudo
+// import { getFirestore } from 'firebase/firestore'; //cria a conexão com o Firestore
+import { Platform } from 'react-native'; //para saber se é web ou app nativo
+import { initializeFirestore } from 'firebase/firestore'; // 
 import { Auth, getAuth, initializeAuth } from 'firebase/auth';
 // @ts-ignore getReactNativePersistence existe no build nativo do SDK, mas não está tipado no pacote "firebase/auth"
 import { getReactNativePersistence } from 'firebase/auth';
@@ -22,11 +22,10 @@ const firebaseConfig = {
 };
 
 // 3. Inicializamos o Firebase com essas credenciais
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
 // 4. Inicializamos o Firestore e exportamos a variável 'db' para ser usada nas outras telas
-export const db = getFirestore(app);
-
+export const db = initializeFirestore(app, { ignoreUndefinedProperties: true });
 // Na web, getAuth já persiste a sessão sozinho (localStorage do navegador).
 // No app nativo (iOS/Android), é preciso dizer explicitamente onde guardar
 // a sessão, senão ela fica só em memória e some ao fechar o app.
