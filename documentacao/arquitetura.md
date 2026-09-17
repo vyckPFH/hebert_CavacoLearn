@@ -6,13 +6,20 @@ Descrição da arquitetura do aplicativo: camadas utilizadas, responsabilidade d
 ### Camadas e suas responsabilidades
 
 #### Camadas principais:
-.
-├── app-diario/       # Aplicação React Native com Expo
-├── aulas/            # Materiais das aulas
-└── documentacao/     # Documentação do projeto
+
+* CavacoLearn-Codigo/   --> Código fonte do projeto, e demais camadas.
+
+* documentacao/     --> Documentação do projeto, incluindo casos de uso, tabelas de requisito e regras de negócio, informações sobre interface e arquitetura, documento de visão e diagramas de BD. 
+
+* README/   --> Readme coisas.
 
 #### Camadas secundárias:
 
+CavacoLearn-Codigo/
+├── Cavaco_Learn 
+├── node_modules 
+
+```
 app-diario/
 ├── assets/                   # Imagens, fontes, etc
 ├── app.json                  # Configuração do Expo
@@ -21,5 +28,6 @@ app-diario/
 ├── package.json              # Dependências e scripts
 ├── tsconfig.json             # Configuração TypeScript
 └── node_modules/             # Dependências instaladas
+```
 
 ### Padrões de nomenclatura
