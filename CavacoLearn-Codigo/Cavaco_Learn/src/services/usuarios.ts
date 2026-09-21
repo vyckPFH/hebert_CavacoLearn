@@ -8,7 +8,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "./firebase";
-import { UsuarioPerfil } from "./types";
+import { UsuarioPerfil } from "../types";
 
 const COLECAO = "usuarios";
 

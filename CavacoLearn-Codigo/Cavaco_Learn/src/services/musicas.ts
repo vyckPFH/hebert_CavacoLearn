@@ -8,7 +8,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "./firebase";
-import { Musica } from "./types";
+import { Musica } from "../types";
 
 const COLECAO = "musicas";
 

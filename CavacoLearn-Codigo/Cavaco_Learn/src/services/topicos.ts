@@ -10,7 +10,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "./firebase";
-import { Topico } from "./types";
+import { Topico } from "../types";
 
 const COLECAO = "topicos";
 

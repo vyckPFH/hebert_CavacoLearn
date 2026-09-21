@@ -10,7 +10,7 @@ import {
   where,
   onSnapshot,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "./firebase";
 import { Exercicio } from "../types";
 
 const COLECAO = "exercicios";

@@ -11,7 +11,7 @@ import {
   orderBy,
   onSnapshot,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "./firebase";
 import { Nivel } from "../types";
 
 const COLECAO = "niveis";
