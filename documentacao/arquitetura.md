@@ -18,6 +18,7 @@ Descrição da arquitetura do aplicativo: camadas utilizadas, responsabilidade d
 CavacoLearn-Codigo/
 ├── Cavaco_Learn              # Pasta...
 └── node_modules/             # Dependências instaladas.
+└── node_modules/             # Dependências instaladas
 ```
 
 ```
@@ -38,6 +39,14 @@ Cavaco_Learn/
 ├── package.json              # Dependências e scripts.
 ├── tsconfig.json             # Configuração TypeScript.
 
+├── assets/                   # Recuros visuais: imagens, fontes, etc.
+├── services/                 # Código de comunicação com APIs e outros serviços
+├── types/                    # Definições de tipos e estruturas de dados
+├── app.json                  # Configuração do Expo
+├── App.tsx                   # Componente raiz (TypeScript)
+├── index.ts                  # Entry point
+├── package.json              # Dependências e scripts
+├── tsconfig.json             # Configuração TypeScript
 ```
 
 ### Padrões de nomenclatura
@@ -45,3 +54,4 @@ Cavaco_Learn/
 - 1° letra das classes -> Maiúscula.
 - lowerCamelCase, em alguns casos com uso de _ (underline). 
 -  
+- 
