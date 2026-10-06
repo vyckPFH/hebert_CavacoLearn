@@ -1,7 +1,7 @@
 export type TipoMissao = 'concluir_topico' | 'concluir_exercicio' | 'desbloquear_musica';
 
 // 6. Missão (Desafio gamificado)
-export interface Missao {
+export type Missao = {
   id?: string;
   titulo: string;
   descricao: string;

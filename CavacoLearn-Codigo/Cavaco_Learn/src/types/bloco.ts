@@ -7,7 +7,7 @@ export type TipoBloco =
   | 'enunciado';
 
 // Bloco de conteúdo dinâmico (renderização dinâmica sem alterar o código do app)
-export interface BlocoConteudo {
+export type BlocoConteudo = {
   id?: string;
   ordem: number;
   tipo: TipoBloco;

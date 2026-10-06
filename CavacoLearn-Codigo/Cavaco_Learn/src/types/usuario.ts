@@ -1,5 +1,5 @@
 // 5. Perfil do Estudante (Gamificação, pontuação e progresso)
-export interface UsuarioPerfil {
+export type Usuario = {
   id?: string;
   id_usuario: string;
   nome: string;

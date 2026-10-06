@@ -1,5 +1,5 @@
 // 1. Nível (Módulo didático do curso)
-export interface Nivel {
+export type Nivel = {
   id?: string;
   titulo: string;
   descricao: string;

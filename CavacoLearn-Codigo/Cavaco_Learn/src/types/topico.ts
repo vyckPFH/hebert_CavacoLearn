@@ -1,7 +1,7 @@
 import { BlocoConteudo } from "./bloco";
 
 // 2. Tópico (Aula didática composta por blocos de conteúdo)
-export interface Topico {
+export type Topico = {
   id?: string;
   nivelId: string; // Relacionamento com Nível
   titulo: string;
