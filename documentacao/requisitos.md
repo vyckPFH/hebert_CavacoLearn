@@ -34,11 +34,9 @@
 | :--- | :--- | :--- |
 | RNF001 | Aplicação Mobile | O aplicativo do aluno deve funcionar em dispositivos Android. |
 | RNF002 | Painel Administrativo Web | O site do administrativo deve funcionar no navegador. |
-| RNF003 | Persistência Relacional | Os dados do sistema devem ser armazenados em um banco de dados relacional. |
-| RNF004 | Renderização Dinâmica | O aplicativo deve ser capaz de renderizar dinamicamente diferentes tipos de componentes de conteúdo. |
-| RNF005 | API REST | A comunicação entre os usuários e o servidor deve ocorrer por meio da API REST. |
-| RNF006 | Disponibilidade Offline | Conteúdos previamente baixados devem permanecer acessíveis sem conexão com a internet. |
-| RNF007 | Escalabilidade | O sistema deve permitir a inclusão de novos conteúdos sem a necessidade de atualização do aplicativo. |
+| RNF003 | Renderização Dinâmica | O aplicativo deve ser capaz de renderizar dinamicamente diferentes tipos de componentes de conteúdo. |
+| RNF004 | Firebase | A comunicação entre os usuários e o servidor deve ocorrer por meio das funções disponibilizadas pelo Firebase. |
+| RNF005 | Escalabilidade | O sistema deve permitir a inclusão de novos conteúdos sem a necessidade de atualização do aplicativo. |
 
 <br>
 <br>
@@ -63,7 +61,7 @@
 | RN014 | Desbloqueio de Músicas | O acesso a novas músicas deve ocorrer automaticamente quando o usuário atender aos critérios de desbloqueio definidos pelo sistema. |
 | RN015 | Controle de Acesso às Músicas | O usuário somente poderá visualizar ou estudar músicas que já tenham sido desbloqueadas. |
 | RN016 | Progressão Individual | O progresso, pontuação, missões concluídas e músicas desbloqueadas pertencem exclusivamente ao usuário que as conquistou. |
-| RN017 | Exclusão da Conta | Remove permanentemente o cadastro do usuário e seus registros do sistema. |
+| RN017 | Exclusão da Conta | Remover permanentemente o cadastro do usuário e seus registros do sistema. |
 | RN018 | Permissão Administrativa | Apenas administradores podem cadastrar, editar ou excluir níveis, tópicos, exercícios e músicas. |
 | RN019 | Alteração da Estrutura | Alterações realizadas pelo administrador devem ser refletidas na estrutura do curso disponibilizada aos alunos. |
 | RN020 | Progressão Pedagógica | Os conteúdos devem ser organizados em uma sequência progressiva de aprendizagem. |
