@@ -2,19 +2,18 @@
 
 ## 1. Introdução
 Descrição da interface e da identidade visual do aplicativo: paleta de
-cores, tipografia (fontes), componentes, diretrizes gerais de UI.
+cores, tipografia (fontes), componentes gráficos, diretrizes gerais de UI.
 
-* A interface deve ser construída a partir de um conjunto de componentes reutilizáveis, regras visuais e padrões de comportamento.
+* A interface deve ser construída a partir de um conjunto de componentes reutilizáveis, regras visuais e padrões de estilo.
 
 ## Descrição geral
-A identidade visual do aplicativo é construída a partir de uma estética relacionada ao universo musical e ao próprio cavaquinho, levando em conta a acessibilidade de navegação entre as telas.
+A identidade visual do aplicativo é construída levando em conta a acessibilidade de navegação entre as telas, ou seja, a organização dos componentes visuais busca proporcionar uma navegação simples e direta entre as principais funcionalidades. 
 
-A organização das telas busca proporcionar uma navegação simples e direta entre as principais funcionalidades. A tela Home  do app funciona como ponto central de acesso às áreas de Aulas, Músicas, Missões e Perfil. Os elementos interativos são representados principalmente por botões, campos de entrada, ícones e controles específicos para cada funcionalidade.
+A tela Home do app funciona como ponto central de acesso às áreas de Aulas, Músicas, Missões, Pontuação atual e Perfil. Os elementos interativos são representados principalmente por botões, campos de entrada e ícones. 
+
+A tela de login apresenta campos para inserção de nome de usuário e senha, além de botões para entrada e cadastro.
 
 As telas possuem uma estrutura comum entre elas, com um cabeçalho superior, título da seção e elementos gráficos relacionados à identidade do aplicativo. Nas telas internas são utilizados elementos de retorno para facilitar a navegação entre as diferentes partes do sistema.
-
-A interface de autenticação apresenta campos para inserção de nome de usuário e senha, além de botões para entrada e cadastro.
-
 Os conteúdos são dispostos em blocos, ou seja, cada tópico, exercício ou música pode ser composto por diferentes componentes, incluindo textos, imagens, áudios, vídeos e outros recursos multimídia, o que torna sua apresentação visual bem dinâmica.
 
 ## Diretrizes gerais de UI (Geral/Principais)
