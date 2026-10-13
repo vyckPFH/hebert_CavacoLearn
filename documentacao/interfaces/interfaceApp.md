@@ -2,7 +2,7 @@
 
 ## 1. Introdução
 Descrição da interface e da identidade visual do aplicativo: paleta de
-cores, tipografia (fontes), componentes, diretrizes gerais de UI e etc.
+cores, tipografia (fontes), componentes, diretrizes gerais de UI.
 
 * A interface deve ser construída a partir de um conjunto de componentes reutilizáveis, regras visuais, tokens de design e padrões de comportamento.
 
