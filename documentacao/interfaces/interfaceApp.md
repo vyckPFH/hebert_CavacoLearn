@@ -4,7 +4,7 @@
 Descrição da interface e da identidade visual do aplicativo: paleta de
 cores, tipografia (fontes), componentes, diretrizes gerais de UI.
 
-* A interface deve ser construída a partir de um conjunto de componentes reutilizáveis, regras visuais, tokens de design e padrões de comportamento.
+* A interface deve ser construída a partir de um conjunto de componentes reutilizáveis, regras visuais e padrões de comportamento.
 
 ## Descrição geral
 A identidade visual do aplicativo é construída a partir de uma estética relacionada ao universo musical e ao próprio cavaquinho, levando em conta a acessibilidade de navegação entre as telas.
@@ -496,249 +496,7 @@ PONTUAÇÃO
 
 ---
 
-## 21. TelaNivel (Representação conceitual)
-
-Representa de maneira geral a tela de níveis.
-
-Deve conter:
-
-- identificação de ordem;
-- tópicos, compostos por conteúdos;
-- exercícios, compostos por conteúdos interativos;
-- botão "continuar/concluir";
-- botão "voltar";
-- indicativo de quanto resta para conclusão.
-
-Exemplo:
-
-```text
-┌─────────────────────────────┐
-│ NÍVEL 1                     │
-│ Primeiros passos            │
-│                             │
-│ Você concluiu 6 de 6        │
-│ conteúdos.                  │
-│                             │
-│ ✓ NÍVEL CONCLUÍDO           │
-└─────────────────────────────┘
-```
-
----
-
-## 22. TelaTopico (Representação conceitual)
-
-Representa de maneira geral a tela de um tópico.
-
-Deve apresentar:
-
-- ordem baseada em nível de pertencimento;
-- título;
-- estado;
-- breve descrição;
-- conteúdo;
-- botão "voltar".
-
-Exemplo:
-
-```text
-←                       01 
-Conhecendo o cavaquinho
-
-✓ CONCLUÍDO
-```
-
----
-
-## 23. TelaExercicio (Representação conceitual)
-
-Representa de maneira geral a tela de exercicíos.
-
-Deve destacar que se trata de uma atividade prática.
-
-Pode apresentar:
-
-- título;
-- estado;
-- recompensa quando aplicável;
-- botões para ações interativas;
-
-Exemplo:
-
-```text
-EXERCÍCIO
-
-Primeiros acordes
-
-+10 pontos
-
-COMEÇAR →
-```
-
----
-
-## 24. TelaMusica (Representação conceitual)
-
-Representa de maneira geral a tela de músicas.
-
-Deve possuir:
-
-- título;
-- artista;
-- tom;
-- dificuldade;
-- estado;
-- botões para ações interativas;
-- etc.
-
-Exemplo:
-
-```text
-Música Exemplo
-Artista
-
-Tom: C
-Dificuldade: Fácil
-
-ESTUDAR →
-```
-
-Músicas bloqueadas devem explicar o motivo quando possível, e a explicação deve aparecer em fonte flutuante, menor, mas não apagada. Estas também devem ser apresentadas com cores brevemente mais apagadas que as disponíveis ao usuário.
-
-Exemplo:
-
-```text
-BLOQUEADA
-
-Complete o Nível 2 para desbloquear.
-```
-
-Ao desbloquear uma música, as cores de seu card devem ficar instantâneamente mais vivas.
-
----
-
-## 25. TelaMissao (Representação conceitual)
-
-A missão deve deixar explícito:
-
-- objetivo/missão em sí;
-- progresso;
-- restante;
-- recompensa;
-- estado da recompensa.
-
-### Em andamento
-
-```text
-Complete 3 exercícios
-
-Você concluiu 1 de 3.
-Faltam 2 exercícios.
-
-+20 pontos
-```
-
-### Concluída
-
-```text
-MISSÃO CONCLUÍDA
-
-Sua recompensa está disponível.
-
-[ RESGATAR +20 ]
-```
-
-### Resgatada
-
-```text
-RECOMPENSA RESGATADA
-
-+20 pontos adicionados.
-```
-
-O botão de resgatar as reconpensas só ficará visível se a tarefa estiver totalmente concluída.
-
----
-
-## 26. TelaConteúdo (Representação conceitual)
-
-Os conteúdos são dispostos em blocos multimídia, seguindo o padrão organizado pelo administrador.
-
-Estrutura:
-
-```text
-←    Título
-
-Título do conteúdo
-
-────────────────
-
-TextBlock
-
-ImageBlock
-
-TextBlock
-
-AudioBlock
-
-VideoBlock
-
-────────────────
-
-[ CONCLUIR ]
-```
-
-O conteúdo deve possuir rolagem vertical.
-
-A interface do conteúdo deve priorizar leitura e compreensão.
-
-Ao concluir:
-
-```text
-Conteúdo concluído!
-
-Você concluiu:
-Primeiros acordes
-
-[ CONTINUAR ]
-```
-
-A atualização do progresso deve acontecer após o registro da conclusão.
-
----
-
-## 27. TelaHome (Representação conceitual)
-
-A Home é o ponto central do aplicativo.
-
-Deve mostrar apenas as informações principais e aberturas para navegação dentro do app.
-
-Estrutura:
-
-```text
-Saudações!
-
-CONTINUE APRENDENDO
-
-[ conteúdo atual ]
-
-SEUS NÍVEIS
-
-[ LevelCard ]
-
-MISSÕES
-
-[ MissionCard ]
-
-MÚSICAS
-
-[ MusicCard / acesso ]
-
-BottomNavigation
-```
-
----
-
-## 28. Loading ou Carregamento
+## 21. Loading ou Carregamento
 
 O carregamento deve ser visualmente discreto.
 
@@ -748,7 +506,7 @@ Quando possível, manter a estrutura visual da tela, ou utilizar tela de carrega
 
 ---
 
-## 29. Estados de interface
+## 22. Estados de interface
 
 Todo componente que depende de dados deve considerar pelo menos:
 
@@ -820,7 +578,7 @@ Não exibir mensagens técnicas diretamente ao aluno.
 
 ---
 
-## 30. Acessibilidade
+## 23. Acessibilidade
 
 É importante garantir:
 
