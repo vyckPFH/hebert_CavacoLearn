@@ -1,22 +1,23 @@
 # Interface do Aplicativo
 
 ## 1. Introdução
-Descrição da interface e da identidade visual do aplicativo: paleta de
-cores, tipografia (fontes), componentes gráficos, diretrizes gerais de UI.
+*Descrição da interface e da identidade visual do aplicativo: paleta de
+cores, tipografia (fontes), componentes gráficos diretrizes gerais de UI.*
 
-* A interface deve ser construída a partir de um conjunto de componentes reutilizáveis, regras visuais e padrões de estilo.
+* A interface foi construída a partir de um conjunto de componentes reutilizáveis, regras visuais e padrões de estilo.
 
-## Descrição geral
-A identidade visual do aplicativo é construída levando em conta a acessibilidade de navegação entre as telas, ou seja, a organização dos componentes visuais busca proporcionar uma navegação simples e direta entre as principais funcionalidades. 
+### Descrição geral
+A identidade visual do aplicativo foi elaborada levando em conta a acessibilidade de navegação entre as telas, ou seja, a organização dos componentes visuais busca proporcionar uma navegação simples e direta entre as principais funcionalidades. 
 
-A tela Home do app funciona como ponto central de acesso às áreas de Aulas, Músicas, Missões, Pontuação atual e Perfil. Os elementos interativos são representados principalmente por botões, campos de entrada e ícones. 
+A tela Home do app funciona como ponto central de acesso às áreas de Aulas, Músicas, Missões, Perfil e Pontuação atual. Os elementos interativos são representados principalmente por botões, campos de entrada e ícones. 
 
 A tela de login apresenta campos para inserção de nome de usuário e senha, além de botões para entrada e cadastro.
 
 As telas possuem uma estrutura comum entre elas, com um cabeçalho superior, título da seção e elementos gráficos relacionados à identidade do aplicativo. Nas telas internas são utilizados elementos de retorno para facilitar a navegação entre as diferentes partes do sistema.
+
 Os conteúdos são dispostos em blocos, ou seja, cada tópico, exercício ou música pode ser composto por diferentes componentes, incluindo textos, imagens, áudios, vídeos e outros recursos multimídia, o que torna sua apresentação visual bem dinâmica.
 
-## Diretrizes gerais de UI (Geral/Principais)
+### Diretrizes gerais de UI (Geral/Principais)
 * Priorizar dispositivos móveis, seguindo a estratégia Mobile-First;
 
 * Manter consistência visual entre as diferentes telas;
@@ -54,15 +55,14 @@ A interface do CavacoLearn deve seguir os seguintes princípios:
 5. **Feedback ao usuário**
 6. **Conteúdo educacional como prioridade**
 7. **Identidade musical sem excesso de elementos decorativos**
-8. **Progressão sem dependência de porcentagens**
-9. **Conteúdo dinâmico**
-10. **Interface preparada para evolução**
+8. **Conteúdo dinâmico**
+9. **Interface preparada para evolução**
 
 ---
 
 ## 3. Público e contexto de uso
 
-O aplicativo é destinado principalmente a iniciantes no aprendizado do cavaquinho, por conta disso, a interface deve evitar pressupor conhecimento técnico ou musical avançado. A experiência deve responder facilmente às perguntas:
+O aplicativo é destinado principalmente a iniciantes no aprendizado do cavaquinho, por conta disso, a interface busca evitar pressupor conhecimento técnico ou musical avançado. A experiência busca responder facilmente às perguntas:
 
 - Onde estou?
 - O que devo fazer agora?
@@ -84,15 +84,11 @@ A identidade visual está relacionada:
 - ao aprendizado;
 - à progressão.
 
-O visual principal será escuro, utilizando tons de verde como cor principal.
+O visual principal é escuro, utilizando tons de verde como cor principal.
 
-Imagens/figuras relacionadas ao cavaquinho ou à música podem aparecer como elementos de identidade, mas não devem prejudicar a leitura do conteúdo educacional.
+Imagens/figuras relacionadas ao cavaquinho ou à música aparecem como elementos de identidade, mas priorizamos a ideia de não prejudicar a leitura do conteúdo educacional. A identidade visual busca apoiar o conteúdo, e não competir com ele.
 
-### Regra
-
-A identidade visual deve apoiar o conteúdo, e não competir com ele.
-
-Evitar:
+Evitamos:
 
 - fundos excessivamente detalhados atrás de textos;
 - excesso de texturas;
@@ -105,115 +101,64 @@ Evitar:
 
 ## 5. Tema
 
-Padrão: Tons escuros.
+Tons escuros e apagados de verde, e verde-claro para alguns detalhes, utilizados em conjunto com elementos em tons de cinza e preto. O fundo principal das telas utiliza a cor preta, enquanto cabeçalhos, ícones e componentes de navegação, botões e elementos de destaque apresentam tonalidades esverdeadas levemente mais claras, destacando-as melhor para o usuário. Os textos utilizam predominantemente tonalidades claras e esverdeadas, criando contraste com o fundo escuro e proporcionando melhor visualização.
+
+Padrão: Tons escuros e dessaturados de verde, com detalhes em verde mais claro.
 
 ### Fundo principal
 
 ```text
-#10120f
+#000000
 ```
 
-### Painel
+### Painel ou Cards flutuantes
+
+```text
+#3D4933
+```
+
+### Interior dos botões
 
 ```text
 #282E23
 ```
 
-### Superfície
+### Traçado das bordas (botões, cards, icons)
 
 ```text
-#343C2D
+#3D4933
 ```
 
-### Superfície elevada
+### Cor de fundo do icon da logotipo 
 
 ```text
-#4F5948
+#4C583F
 ```
 
 ---
 
-## 6. Paleta de cores
-Tons escuros e apagados de verde, como verde-musgo, verde-oliva e verde-claro para alguns detalhes, utilizados em conjunto com elementos em tons de cinza e preto. O fundo das telas deve utilizar uma imagem escurecida, se possível com cavaquinho de fundo, enquanto cabeçalhos, ícones e componentes de navegação, botões e elementos de destaque devem apresentar tonalidades esverdeadas mais claras, destacando-as melhor para o usuário. Os textos também utilizam predominantemente tonalidades claras e esverdeadas, criando contraste com o fundo escuro e proporcionando melhor visualização.
-
-### Lista de cores principais:
+## 6. Paleta de cores completa
 
 | Nome | Cor | Uso |
 |---|---|---|
-| bgDark | #000000 | Fundo principal |
-| bgPanel | #282E23 | Painéis principais |
-| primary | #4C583F | Botões e componentes |
-| primaryLight | #5A6C47 | Estados destacados |
-| accent | #a0c997 | Destaques e ações |
-| accentYellow | #dce59c | Recompensas/destaques especiais |
-| label | #869A72 | Labels secundários |
-| textDark | #262B22 | Texto sobre fundos claros |
-| textClear | #e9f9dc | Texto sobre fundos escuros |
-| textMuted | #868686 | Texto secundário |
-| inputBg | #B3B0B0 | Campos |
-| surface | #343C2D | Cards/superfícies |
-| surfaceLight | #4F5948 | Superfícies elevadas |
+| fundo | #000000 | Fundo principal |
+| cards | #3D4933 | Painéis principais |
+| botoes | #4C583F | Preenchimento de botões e componentes |
+| bordas | #3D4933 | Traçado/bordas dos componentes "flutuantes" (cards, botões) |
+| titulo | #A8C590 | Texto principal do app (títulos, nomes dos botões, conteúdos) |
+| subTitulo | #7C926A | Texto secundário do app (subtítulos, informações breves, dados do usuário) |
+| textoDestaque | #C3D15F | Destaques, valores de recompesas e progresso |
+| campoInput | #43483E | Fundo do campo de preenchimento |
+| placeholder | #7C926A | Texto dentro dos campos de input |
+| bordaInput | #596A4C | Traçado/bordas dos campos de input |
+| logout | #531112 | Preencimento do botão de logout |
+| logoutBordas | #811F20 | Traçadp/bordas do botão de logout |
+| logoutTexto | #C93032 | Texto do botão de logout |
+| icons | #A8C590 | Preenchimento/cor dos icons "voltar" |
 
 ---
 
-## 7. Contraste
-
-O contraste deve ser tratado como requisito de implementação, não apenas como detalhe visual.
-
-Todo texto deve permanecer claramente legível sobre os fundos utilizados.
-
-### Regra
-
-Texto principal:
-
-- branco ou tonalidade de verde claro, mas não vibrante, minimamente apagado, porém ainda sim visível;
-- contraste alto.
-
-Texto secundário:
-
-- cinza/verde claro, mas não vibrante;
-- somente quando a informação for realmente secundária.
-
-Texto de ação:
-
-- utilizar o verde de destaque quando for algo coletável/disponível ao usuário.
-
----
-
-### ATENÇÃO: Cuidado com o verde de destaque
-
-O `#a0c997` é uma cor de destaque específica.
-
-Não utilizar essa cor como texto pequeno sobre fundo claro.
-
-Ela deve ser utilizada principalmente em:
-
-- ícones;
-- indicadores;
-- títulos curtos;
-- estados ativos;
-- elementos de destaque;
-- pequenos detalhes de recompensa.
-
-Quando a informação exigir leitura longa, e o fundo for escuro, utilizar texto claro.
-
----
-
-## 8. Imagens de fundo
-
-Imagens, se forem utilizadas, devem ser utilizadas no fundo de telas muito específicas. E quando utilizadas:
-
-1. devem possuir escurecimento;
-2. não podem prejudicar a leitura;
-3. não devem aparecer atrás de blocos de texto longos sem proteção;
-4. podem ser substituídas por fundo sólido em telas educacionais;
-5. devem ser tratadas como elemento de identidade, não como conteúdo.
-
-Para telas de conteúdo educacional, deve-se utilizar fundo sólido com tons escuros.
-
----
-
-## 9. Tipografia
+## 7. Tipografia
 
 ### Fonte principal
 
@@ -233,43 +178,29 @@ Utilizada em todos os textos, por exemplo:
 
 ---
 
-## 10. Espaçamento
+## 8. Espaçamento
 
-Não utilizar espaçamentos aleatórios em cada tela.
+Foi criada uma escala padrão de espaçamento, a fim de evitar a desordem dos componentes.
 
-Criar uma escala padrão, por exemplo:
-
-```text
-4
-8
-12
-16
-20
-24
-32
-40
-48
+```ts
+  xs: 4,
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 20,
+  xxl: 24,
+  xxxl: 32,
+  huge: 40,
+  section: 48
 ```
 
-### Regra
-
-O mesmo tipo de espaço deve representar a mesma relação visual.
-
-Por exemplo:
-
-- 16 px entre itens relacionados;
-- 24 px entre grupos;
-- 32 px entre seções.
-
-Esses valores são uma base inicial e podem ser, e serão, calibrados durante a implementação.
+Esses valores são uma base inicial e foram calibrados durante a implementação.
 
 ---
 
-## 11. Bordas e cantos
+## 9. Bordas e cantos
 
-Os componentes devem possuir cantos arredondados moderados.
-
-Sugestão/Exemplo:
+Os componentes, como botões e cards, possuem cantos arredondados moderados. Para os quais também foi criada uma escala padrão.
 
 ```ts
 export const radius = {
@@ -280,8 +211,7 @@ export const radius = {
   pill: 999,
 };
 ```
-
-Uso:
+Sendo:
 
 - `sm`: pequenos elementos;
 - `md`: inputs;
@@ -289,42 +219,33 @@ Uso:
 - `xl`: componentes de destaque;
 - `pill`: badges e estados.
 
-Evitar arredondamento exagerado em todos os elementos, ajustar conforme desenvolvimento.
+---
+
+### Sombras e elevação
+
+Para destaque e breve sensação de sombreamento e elevação, foram utilizados tons levemente mais claros em torno da delimitação dos componentes principais, como botões e cards, ícone do perfil, cabeçalhos e blocos informativos.
 
 ---
 
-## 12. Bordas, sombras e elevação
+## 10. Ícones
 
-O tema escuro não deve depender de sombras pesadas. Procurar destacar as elevações com tons levemente mais claros que o elemento em destaque.
+Para extração dos ícones foi utilizada uma única biblioteca no projeto. 
 
-Utilizar:
-
-- diferença de cor entre superfícies;
-- bordas discretas;
-- contraste;
-- espaçamento.
-
-Sombras podem ser utilizadas apenas para indicar elevação quando necessário, como por exemplo em botões, ícone do perfil do usuário, cabeçalhos e blocos informativos.
-
----
-
-## 13. Ícones
-
-Os ícones devem seguir uma única biblioteca no projeto. 
-
-A biblioteca escolhida é: https://lucide.dev/icons
+A biblioteca escolhida foi: https://lucide.dev/icons
 
 Ícones escolhidos para elementos principais:
 
 - Botão voltar: https://lucide.dev/icons/arrow-big-left
-- Perfil padrão do usuário: 
-- 
+- Títulos: https://lucide.dev/icons/sixteenth-notes, https://lucide.dev/icons/clef-treble
+- Título pontuação: https://lucide.dev/icons/star
+
+Por escolha estética, os elementos de decoração dos títulos estão dispostos de ambos os lados do texto em que foram utilizados.
 
 ---
 
-## 14. Tamanho de toque
+## 11. Tamanho de toque
 
-Elementos interativos precisam possuir área de toque adequada, deve-se evitar botões e ícones pequenos demais.
+Elementos interativos precisam possuir área de toque adequada, por conta buscamos evitar botões e ícones pequenos demais.
 
 Especialmente:
 
@@ -334,146 +255,72 @@ Especialmente:
 - controles de áudio;
 - botões de conclusão.
 
-A área clicável pode ser maior que o elemento visual, mas deve se adequar aos outros componentes.
+A área clicável pode ser maior que o texto de identificação, mas deve se adequar aos outros componentes.
 
 ---
 
-## 15. Button (Botão/ões)
-
-O Button é o componente padrão e um dos principais para ações dentro do sistema, sendo divido em ações como:
-
-```text
-CONTINUAR
-CONCLUIR
-RESGATAR
-COMEÇAR
-VOLTAR
-EDITAR
-EXCLUIR CONTA
-LOGOUT
-etc...
-```
-
-Deve possuir destaque diferente, com base nas cores, quando for alterável entre estados disponível ou indisponível à interação com usuário.
-
----
-
-## 16. Input 
-
-O Input será utilizado em:
-
-- login;
-- cadastro;
-- edição de perfil;
-- formulários administrativos.
-
-Deve possuir:
-
-- label;
-- valor;
-- placeholder;
-- estado normal;
-- foco;
-- erro;
-- desabilitado.
-
-Exemplos:
-
-```text
-Nome de usuário
-┌────────────────────────────┐
-│ Vick                       │
-└────────────────────────────┘
-```
-
-Estado de erro:
-
-```text
-Senha
-┌────────────────────────────┐
-│                            │
-└────────────────────────────┘
-A senha é obrigatória.
-```
-
----
-
-## 17. Header
-
-O Header deve permitir:
-
-- título;
-- botão voltar;
-- ação contextual opcional.
-
-Exemplo:
-
-```text
-←  Primeiros acordes
-```
-
-A tela principal, Home, não possui botão de voltar. Para voltar à tela de login, deve-se fazer logout da conta. 
-
-Algumas telas podem possuir subtítulos explicativos, o que configura uma ação contextual opcional.
-
----
-
-## 18. BottomNavigation (botões fixos)
-
-Navegação principal:
+## 12. Botões de navegação
 
 ```text
 Início
 Aulas
 Missões
-Perfil
+Músicas
 ```
 
-A navegação deve:
-
-- destacar a seção atual;
-- utilizar apenas seu título como identificação;
-- possuir sombreamento correspondente;
-
-Músicas podem ser acessadas pela Home e pela área de aulas/conteúdos sem necessariamente ocupar uma posição permanente na BottomNavigation.
+Os botões de navegação não aparecem na tela home, mas estão presentes em telas como missões, músicas e aulas, de tal modo a facilitar a navegação, evitando que o ususário tenha que voltar à tela home para acessar outras áreas do app.
 
 ---
 
-## 19. StatusBadge
+## 13. StatusBadge
 
-Estados principais:
+### Níveis, tópicos e exercícios
 
 ```text
 DISPONÍVEL
-EM ANDAMENTO
-CONCLUÍDO
 BLOQUEADO
-OFFLINE
+CONCLUÍDO
 ```
-
-Cada estado deve possuir representação visual consistente.
-
-Não depender exclusivamente de cor, mas utilizá-la a favor.
-
-Exemplo:
+#### Representação visual
 
 ```text
-CONCLUÍDO -> https://lucide.dev/icons/check - cor: #dce59c
-BLOQUEADO -> https://lucide.dev/icons/ban - cor: #472424
-OFFLINE -> https://lucide.dev/icons/wifi-off - cor: #262B22 
-EM ANDAMENTO -> https://lucide.dev/icons/loader-circle - cor: #262B22 
-DISPONÍVEL -> https://lucide.dev/icons/star - cor: #a0c997
+CONCLUÍDO -> https://lucide.dev/icons/check - corTexto: #869B75 - botão padrão e ícon padrão. 
+DISPONÍVEL -> https://lucide.dev/icons/star - cor: #A8C590
 ```
 
-O ícone/texto ajuda a comunicar o estado mesmo quando a cor não estiver disponível.
+### Músicas
+
+```text
+DISPONÍVEL
+BLOQUEADO/INDISPONÍVEL
+```
+#### Representação visual
+
+```text
+DISPONÍVEL -> https://lucide.dev/icons/star - corTexto: #A8C590
+BLOQUEADO/INDISPONÍVEL -> corTexto: #869B75 - botão de coletar com valor dos pontos necessários para tal, cor: botão padrão, valor destaque.
+```
+
+### Missões
+
+```text
+DISPONÍVEL
+BLOQUEADO/INDISPONÍVEL
+CONCLUÍDO
+```
+#### Representação visual
+
+```text
+DISPONÍVEL -> https://lucide.dev/icons/star - corTexto: #A8C590 - botão de coletar com valor dos pontos necessários para tal, cor: botão padrão, valor destaque.
+BLOQUEADO/INDISPONÍVEL -> corTexto: #A8C590
+CONCLUÍDO -> corTexto: #869B75 - após coletado, texto passa a ficar tachado (riscado). 
+```
 
 ---
 
-## 20. Progresso
+## 14. Progresso
 
-A interface não utilizará porcentagens como principal forma de apresentação, pois o progresso deve ser apresentado de forma intuitiva.
-
-Exemplo:
+O progresso do usuário é apresentado de maneira intuitiva, basicamente uma listagem de quanto o usuário já desbloqueou, acessou ou concluiu. Além da quantidade de pontos coletados pelo mesmo. 
 
 ```text
 (https://lucide.dev/icons/clef-treble) SEU PROGRESSO (https://lucide.dev/icons/music-4)
@@ -492,16 +339,6 @@ MÚSICAS
 PONTUAÇÃO
 320 pontos
 ```
-
----
-
-## 21. Loading ou Carregamento
-
-O carregamento deve ser visualmente discreto.
-
-Evitar telas inteiras com spinners permanentes.
-
-Quando possível, manter a estrutura visual da tela, ou utilizar tela de carregamento padrão.
 
 ---
 
@@ -530,7 +367,7 @@ Empty / Error
 
 ### Empty State
 
-Quando não houver conteúdo, exemplo:
+Quando não houver conteúdo:
 
 ```text
 Nenhuma missão disponível.
@@ -539,7 +376,7 @@ Volte mais tarde para conferir
 novos desafios.
 ```
 
-O Empty State deve explicar:
+O Empty State explica:
 
 - o que está vazio;
 - por que pode estar vazio;
@@ -572,23 +409,3 @@ Verifique sua conexão e tente novamente.
 
 [ TENTAR NOVAMENTE ]
 ```
-
-Não exibir mensagens técnicas diretamente ao aluno.
-
----
-
-## 23. Acessibilidade
-
-É importante garantir:
-
-- contraste adequado;
-- textos legíveis;
-- áreas de toque adequadas;
-- não depender somente de cor;
-- labels em inputs;
-- mensagens de erro compreensíveis;
-- navegação previsível;
-- textos de botões claros;
-- responsividade.
-
-
