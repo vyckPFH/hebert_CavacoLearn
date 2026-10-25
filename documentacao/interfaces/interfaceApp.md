@@ -143,7 +143,7 @@ Padrão: Tons escuros e dessaturados de verde, com detalhes em verde mais claro.
 |---|---|---|
 | fundo | #000000 | Fundo principal |
 | cards | #3D4933 | Painéis principais |
-| botoes | #4C583F | Preenchimento de botões e componentes |
+| botoes | #282E23 | Preenchimento de botões e componentes |
 | bordas | #3D4933 | Traçado/bordas dos componentes "flutuantes" (cards, botões) |
 | titulo | #A8C590 | Texto principal do app (títulos, nomes dos botões, conteúdos) |
 | subTitulo | #7C926A | Texto secundário do app (subtítulos, informações breves, dados do usuário) |
