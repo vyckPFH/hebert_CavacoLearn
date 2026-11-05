@@ -11,7 +11,7 @@ A identidade visual do aplicativo foi elaborada levando em conta a acessibilidad
 
 A tela Home do app funciona como ponto central de acesso às áreas de Aulas, Músicas, Missões, Perfil e Pontuação atual. Os elementos interativos são representados principalmente por botões, campos de entrada e ícones. 
 
-A tela de login apresenta campos para inserção de nome de usuário e senha, além de botões para entrada e cadastro.
+A tela de login apresenta campos para inserção do gmail e senha, além de botões para entrada e cadastro.
 
 As telas possuem uma estrutura comum entre elas, com um cabeçalho superior, título da seção e elementos gráficos relacionados à identidade do aplicativo. Nas telas internas são utilizados elementos de retorno para facilitar a navegação entre as diferentes partes do sistema.
 
@@ -36,8 +36,6 @@ Os conteúdos são dispostos em blocos, ou seja, cada tópico, exercício ou mú
 
 * Manter a estrutura da interface compatível com a renderização dinâmica dos conteúdos;
 
-* Disponibilizar mecanismos de acesso aos conteúdos baixados para utilização offline;
-
 * Diferenciar visualmente elementos relacionados à progressão, missões e recompensas;
 
 * Adaptar a interface para diferentes tamanhos de tela posteriormente, preservando a estrutura desenvolvida para dispositivos móveis.
@@ -46,7 +44,7 @@ Os conteúdos são dispostos em blocos, ou seja, cada tópico, exercício ou mú
 
 ## 2. Princípios do design
 
-A interface do CavacoLearn deve seguir os seguintes princípios:
+A interface do CavacoLearn segue os seguintes princípios:
 
 1. **Simplicidade**
 2. **Consistência**
@@ -54,7 +52,7 @@ A interface do CavacoLearn deve seguir os seguintes princípios:
 4. **Clareza das ações disponíveis**
 5. **Feedback ao usuário**
 6. **Conteúdo educacional como prioridade**
-7. **Identidade musical sem excesso de elementos decorativos**
+7. **Aplicar identidade musical sem excesso de elementos decorativos**
 8. **Conteúdo dinâmico**
 9. **Interface preparada para evolução**
 
@@ -71,7 +69,6 @@ O aplicativo é destinado principalmente a iniciantes no aprendizado do cavaquin
 - O que posso acessar?
 - Por que determinado conteúdo está bloqueado?
 - O que ganho ao concluir uma missão?
-- Como continuo de onde parei?
 
 ---
 
@@ -84,7 +81,7 @@ A identidade visual está relacionada:
 - ao aprendizado;
 - à progressão.
 
-O visual principal é escuro, utilizando tons de verde como cor principal.
+O visual escolhido é escuro, utilizando tons de verde como cor principal.
 
 Imagens/figuras relacionadas ao cavaquinho ou à música aparecem como elementos de identidade, mas priorizamos a ideia de não prejudicar a leitura do conteúdo educacional. A identidade visual busca apoiar o conteúdo, e não competir com ele.
 
@@ -101,7 +98,7 @@ Evitamos:
 
 ## 5. Tema
 
-Tons escuros e apagados de verde, e verde-claro para alguns detalhes, utilizados em conjunto com elementos em tons de cinza e preto. O fundo principal das telas utiliza a cor preta, enquanto cabeçalhos, ícones e componentes de navegação, botões e elementos de destaque apresentam tonalidades esverdeadas levemente mais claras, destacando-as melhor para o usuário. Os textos utilizam predominantemente tonalidades claras e esverdeadas, criando contraste com o fundo escuro e proporcionando melhor visualização.
+Tons escuros e apagados de verde, e verde levemente mais claro para detalhes de sombreamento. O fundo principal das telas utiliza a cor preta, enquanto cabeçalhos, ícones e componentes de navegação, botões e elementos de destaque apresentam tonalidades esverdeadas levemente mais claras, destacando-as melhor para o usuário. Os textos utilizam predominantemente tonalidades claras e esverdeadas, criando contraste com o fundo escuro e proporcionando melhor visualização.
 
 Padrão: Tons escuros e dessaturados de verde, com detalhes em verde mais claro.
 
@@ -183,15 +180,15 @@ Utilizada em todos os textos, por exemplo:
 Foi criada uma escala padrão de espaçamento, a fim de evitar a desordem dos componentes.
 
 ```ts
-  xs: 4,
-  sm: 8,
-  md: 12,
-  lg: 16,
-  xl: 20,
-  xxl: 24,
-  xxxl: 32,
-  huge: 40,
-  section: 48
+xs: 4,
+sm: 6,
+md: 8,
+lg: 12,
+xl: 14,
+xxl: 16,
+xxxl: 20,
+huge: 24,
+section: 32
 ```
 
 Esses valores são uma base inicial e foram calibrados durante a implementação.
@@ -204,10 +201,10 @@ Os componentes, como botões e cards, possuem cantos arredondados moderados. Par
 
 ```ts
 export const radius = {
-  sm: 6,
-  md: 10,
-  lg: 16,
-  xl: 20,
+  sm: 14,
+  md: 16,
+  lg: 18,
+  xl: 22,
   pill: 999,
 };
 ```
