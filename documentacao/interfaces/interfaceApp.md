@@ -226,7 +226,7 @@ Para destaque e breve sensação de sombreamento e elevação, foram utilizados 
 
 ## 10. Ícones
 
-Para extração dos ícones foi utilizada uma única biblioteca no projeto. 
+Para extração dos ícones foi utilizada uma única biblioteca. 
 
 A biblioteca escolhida foi: https://lucide.dev/icons
 
@@ -249,7 +249,6 @@ Especialmente:
 - botão voltar;
 - ícones da navegação;
 - botões de ação;
-- controles de áudio;
 - botões de conclusão.
 
 A área clicável pode ser maior que o texto de identificação, mas deve se adequar aos outros componentes.
@@ -319,6 +318,8 @@ CONCLUÍDO -> corTexto: #869B75 - após coletado, texto passa a ficar tachado (r
 
 O progresso do usuário é apresentado de maneira intuitiva, basicamente uma listagem de quanto o usuário já desbloqueou, acessou ou concluiu. Além da quantidade de pontos coletados pelo mesmo. 
 
+Representação conceitual:
+
 ```text
 (https://lucide.dev/icons/clef-treble) SEU PROGRESSO (https://lucide.dev/icons/music-4)
 
@@ -348,16 +349,6 @@ Loading
 Success
 Empty
 Error
-```
-
-Exemplo:
-
-```text
-Loading
-   ↓
-Success
-   ↓
-Empty / Error
 ```
 
 ---
