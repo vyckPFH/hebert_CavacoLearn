@@ -66,4 +66,66 @@ O painel é destinado ao administrador do sistema, que cadastra e mantém o cont
 
 ---
 
+## 4. Identidade visual
 
+O visual escolhido é o mesmo do aplicativo: escuro, utilizando tons de verde como cor principal. No painel web, a identidade é transmitida apenas pela paleta e pela tipografia, pois o foco do painel é a leitura de listas e o preenchimento de formulários.
+
+Evitamos:
+• imagens ou texturas de fundo;
+• elementos decorativos que disputem atenção com os formulários;
+• muitos elementos luminosos;
+• excesso de cores;
+• animações e/ou elementos que distraiam o administrador.
+
+---
+
+## 5. Tema
+
+Tons escuros e apagados de verde, com verde levemente mais claro para detalhes. O fundo principal das telas utiliza a cor preta, enquanto o cabeçalho, os cards, os botões e os blocos de conteúdo apresentam tonalidades esverdeadas levemente mais claras, destacando-os melhor para o usuário. Os textos utilizam tonalidades claras e esverdeadas, criando contraste com o fundo escuro.
+
+Padrão: tons escuros e dessaturados de verde, com detalhes em verde mais claro.
+
+### Fundo principal
+
+```text
+#000000
+```
+
+### Painel ou Cards flutuantes
+
+```text
+#3D4933
+```
+
+### Interior dos botões
+
+```text
+#282E23
+```
+
+### Traçado das bordas (botões, cards, icons)
+
+```text
+#3D4933
+```
+
+---
+
+## 6. Paleta de cores completa
+A paleta é a mesma do aplicativo, porém os usos foram redefinidos para o contexto web.
+
+| Nome | Cor | Uso |
+|---|---|---|
+| fundo | #000000 | Fundo principal |
+| cards | #3D4933 | Painéis principais (Cabeçalho, cards, blocos do editor de conteúdo, faixa de título de seção e janela de confirmação) |
+| botoes | #282E23 | Preenchimento de botões e componentes |
+| bordas | #3D4933 | Traçado/bordas dos componentes "flutuantes" (cards, botões) |
+| titulo | #A8C590 | Texto principal (títulos, nomes dos botões, conteúdos) |
+| subTitulo | #7C926A | Texto secundário do app (subtítulos, informações breves, dados do usuário, informações complementares dos itens e textos de apoio) |
+| campoInput | #43483E | Fundo do campo de preenchimento |
+| placeholder | #7C926A | Texto dentro dos campos de input |
+| bordaInput | #596A4C | Traçado/bordas dos campos de input |
+| logout | #531112 | Preenchimento dos botões destrutivos: Sair e Excluir |
+| logoutBordas | #811F20 | Traçado/bordas dos botões destrutivos |
+| logoutTexto | #C93032 | Texto dos botões destrutivos e das mensagens de erro |
+| icons | #A8C590 | Preenchimento/cor dos icons "voltar" |
