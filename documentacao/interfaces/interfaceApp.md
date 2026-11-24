@@ -228,7 +228,7 @@ Para destaque e breve sensação de sombreamento e elevação, foram utilizados 
 
 Para extração dos ícones foi utilizada uma única biblioteca. 
 
-A biblioteca escolhida foi: https://lucide.dev/icons
+Biblioteca escolhida: https://lucide.dev/icons
 
 Ícones escolhidos para elementos principais:
 
