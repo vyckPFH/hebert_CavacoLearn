@@ -125,7 +125,197 @@ A paleta é a mesma do aplicativo, porém os usos foram redefinidos para o conte
 | campoInput | #43483E | Fundo do campo de preenchimento |
 | placeholder | #7C926A | Texto dentro dos campos de input |
 | bordaInput | #596A4C | Traçado/bordas dos campos de input |
-| logout | #531112 | Preenchimento dos botões destrutivos: Sair e Excluir |
-| logoutBordas | #811F20 | Traçado/bordas dos botões destrutivos |
-| logoutTexto | #C93032 | Texto dos botões destrutivos e das mensagens de erro |
+| destructive | #531112 | Preenchimento dos botões destrutivos: Sair e Excluir |
+| destructiveBordas | #811F20 | Traçado/bordas dos botões destrutivos |
+| destructiveTexto | #C93032 | Texto dos botões destrutivos e das mensagens de erro |
 | icons | #A8C590 | Preenchimento/cor dos icons "voltar" |
+
+---
+
+## 7. Tipografia
+
+### Fonte principal
+
+#### Calistoga
+
+A mesma fonte do aplicativo, utilizada em todos os textos do painel, por exemplo:
+• título do cabeçalho;
+• títulos de seção;
+• rótulos dos campos;
+• nomes dos botões;
+• descrição dos itens das listas;
+• mensagens de estado, de erro e de confirmação.
+
+---
+
+## 8. Espaçamento
+
+No painel web, os valores foram ampliados para telas largas, com mouse e teclado. Os valores são em pixels CSS e são aplicados em rem (1rem = 16px), para respeitar o zoom e as preferências de fonte do navegador.
+
+```ts
+xs: 4,       // 0.25rem
+sm: 8,       // 0.5rem
+md: 12,      // 0.75rem
+lg: 16,      // 1rem
+xl: 24,      // 1.5rem
+xxl: 32,     // 2rem
+xxxl: 40,    // 2.5rem
+huge: 56,    // 3.5rem
+section: 72  // 4.5rem
+```
+
+### Aplicação no painel (valores iniciais, a calibrar durante a implementação):
+
+• entre rótulo e campo: sm (8px);
+• entre campos de um formulário: lg (16px);
+• entre botões de ação de uma mesma linha: xl (24px);
+• entre os botões de um menu (Home e Aulas): xl (24px);
+• espaço interno de cards: xl (24px);
+• espaço interno de linhas de lista: lg (16px) na vertical e xl (24px) na horizontal;
+• entre linhas da lista: md (12px);
+• entre blocos do editor de conteúdo: lg (16px);
+• entre seções (formulário e lista): xxxl (40px);
+• entre o cabeçalho e o conteúdo: huge (56px);
+• margem lateral da página: xxl (32px);
+• entre grandes áreas da tela (por exemplo, o menu e o botão Voltar no canto): section (72px).
+
+---
+
+## 9. Bordas e cantos
+
+Os componentes possuem cantos arredondados, seguindo a mesma lógica do aplicativo, mas com valores ajustados ao tamanho dos componentes na web, onde botões e campos têm 44px de altura e os cards são maiores:
+
+```ts
+export const radius = {
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  pill: 999,
+};
+```
+
+### Aplicação no painel:
+• sm: botões pequenos dentro de linhas de lista (Editar, Excluir);
+• md: campos de texto longo (áreas de texto dos blocos);
+• lg: cards, blocos do editor e linhas de lista;
+• xl: janela de confirmação;
+• pill: campos de uma linha e botões principais (Entrar, Cadastrar, Voltar, Salvar, Cancelar).
+
+### Sombras e elevação
+Para destaque e breve sensação de sombreamento e elevação, foram utilizados tons levemente mais claros em torno da delimitação dos componentes principais, como botões e cards, cabeçalhos e blocos informativos.
+
+---
+
+## 10. Ícones
+
+O painel web utiliza apenas um ícone, o botão "voltar". Além disso, toda ação e todo elemento de navegação são identificados por texto, o que também deixa o significado de cada botão explícito:
+
+Biblioteca escolhida: https://lucide.dev/icons
+
+Ícone escolhido para botão "voltar": https://lucide.dev/icons/arrow-big-left
+
+• Sair: botão de texto "Sair";
+• Excluir: botão de texto "Excluir" (no protótipo, o botão vermelho com "X" é substituído pelo texto);
+• Mover itens: botões de texto "Subir" e "Descer";
+• Títulos: sem elementos de decoração ao lado do texto.
+
+A única exceção são os controles nativos do navegador (como a seta de um campo de seleção), que não são ícones do projeto.
+
+---
+
+## 11. Área de clique e interação
+
+Elementos interativos precisam possuir área de clique adequada e espaçamento suficiente para evitar cliques acidentais, especialmente:
+
+• botões Editar e Excluir de cada linha da lista, que ficam separados por espaçamento xl para reduzir o risco de excluir por engano;
+• botões Subir e Descer do editor de blocos e da ordenação de itens;
+• botões de ação dos formulários (Cadastrar, Salvar, Cancelar, Voltar).
+
+---
+
+## 12. Navegação
+O painel, diferente do aplicativo, não possui barra de navegação persistente. A navegação é hierárquica, em dois níveis, a partir da Home:
+
+```ts
+Login
+  └── Home
+        ├── Aulas Registradas
+        │     ├── Níveis Registrados
+        │     ├── Tópicos Registrados
+        │     └── Exercícios Registrados
+        ├── Missões Registradas
+        ├── Usuários Registrados
+        └── Músicas Registradas
+```
+        
+• A Home e a tela central de Aulas funcionam como menus de botões centralizados.
+• Todas as telas internas possuem o botão Voltar, que retorna à tela anterior.
+• Na Home, no lugar do Voltar, fica o botão Sair, que encerra a sessão.
+• O título do cabeçalho é fixo ("Área do Administrador"); a localização do administrador é indicada pelo "subtítulo", um título da seção dentro da tela (por exemplo, "Nova Missão" e "Missões Cadastradas").
+• O botão Voltar fica no canto inferior direito nos menus (Home e Aulas) e ao lado do botão Cadastrar nas telas de gerenciamento.
+
+---
+
+## 13. Componentes
+
+### Botão
+
+Preenchimento botoes, borda bordas, texto titulo, formato pill. Utilizado em menus, formulários e navegação.
+
+### Botão pequeno de linha
+
+Versão reduzida do botão, formato sm, utilizada dentro das linhas das listas (Editar).
+
+### Botão destrutivo
+Preenchimento destructive, borda destructiveBordas, texto destructiveTexto. Utilizado em Sair e Excluir, e no botão de confirmação da janela de exclusão. É o único componente que utiliza o vermelho, para que o administrador reconheça imediatamente as ações irreversíveis.
+
+### Campo de preenchimento
+
+Rótulo acima do campo, em titulo. Fundo campoInput, borda bordaInput, texto de exemplo em placeholder. Em caso de erro, a mensagem aparece logo abaixo do campo em destructiveTexto. Variações:
+• campo de texto de uma linha (pill);
+• campo numérico (recompensa, pontos de desbloqueio, ordem);
+• campo de senha;
+• área de texto (md), utilizada nos blocos de texto;
+• campo de seleção (nível de um tópico ou exercício, tipo de bloco), com a mesma aparência dos campos de texto.
+
+### Card e faixa de seção
+
+Fundo cards, borda bordas, formato lg. A faixa de título de seção usa o mesmo fundo cards, com texto titulo.
+
+### Linha de lista
+
+Cada item cadastrado é uma linha com:
+• à esquerda, a descrição do item (titulo) e uma informação secundária (subTitulo);
+• à direita, os botões Editar e Excluir.
+
+```ts
+Completa 1 exercício diariamente.                  [ Editar ] [ Excluir ]
+  Recompensa: 10 pontos.
+```
+
+### Editor de blocos
+
+Usado em tópicos, exercícios e músicas. O conteúdo é uma lista de blocos ordenados, cada um exibido como um card com:
+• cabeçalho com a posição e o tipo do bloco (por exemplo, "Bloco 2 — Texto");
+• campos específicos do tipo;
+• botões Subir, Descer e Excluir bloco.
+
+| Tipo | Campos |
+| :--- | :--- |
+| **Título** | Texto do título |
+| **Texto** | Área de texto |
+| **Imagem** | Arquivo ou endereço da imagem; descrição alternativa |
+| **Áudio** | Arquivo ou endereço do áudio |
+| **Vídeo** | Arquivo ou endereço do vídeo |
+| **Link** | Texto exibido e endereço |
+
+Ao final da lista, o administrador escolhe o tipo em um campo de seleção e usa o botão "Adicionar bloco". A lista de tipos deve ser montada a partir dos tipos suportados pelo sistema, de modo que novos tipos possam ser incluídos sem reformular a tela. A ordem dos blocos na tela é exatamente a ordem em que o aluno verá o conteúdo.
+
+### Janela de confirmação
+
+Card com borda bordas, formato xl, centralizado sobre a tela escurecida. Contém uma pergunta, uma frase de apoio e dois botões: Excluir (destrutivo) e Cancelar.
+
+---
+
+## 
