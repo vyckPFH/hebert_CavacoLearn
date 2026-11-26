@@ -8,7 +8,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "./firebase";
-import { UsuarioPerfil } from "../types";
+import { Usuario } from "../types";
 
 const COLECAO = "usuarios";
 
@@ -19,15 +19,15 @@ export async function obterOuCriarPerfil(
   userId: string,
   nomePadrao: string = "Aluno de Cavaquinho",
   emailPadrao: string = ""
-): Promise<UsuarioPerfil> {
+): Promise<Usuario> {
   const ref = doc(db, COLECAO, userId);
   const snapshot = await getDoc(ref);
 
   if (snapshot.exists()) {
-    return { id: snapshot.id, ...(snapshot.data() as Omit<UsuarioPerfil, "id">) };
+    return { id: snapshot.id, ...(snapshot.data() as Omit<Usuario, "id">) };
   }
 
-  const novoPerfil: Omit<UsuarioPerfil, "id"> = {
+  const novoPerfil: Omit<Usuario, "id"> = {
     id_usuario: userId,
     nome: nomePadrao,
     email: emailPadrao,
@@ -46,7 +46,7 @@ export async function obterOuCriarPerfil(
 // Sincroniza o perfil do aluno em tempo real
 export function sincronizarPerfil(
   userId: string,
-  callback: (perfil: UsuarioPerfil | null) => void,
+  callback: (perfil: Usuario | null) => void,
   onError?: (erro: any) => void
 ) {
   const ref = doc(db, COLECAO, userId);
@@ -55,7 +55,7 @@ export function sincronizarPerfil(
     ref,
     (snapshot) => {
       if (snapshot.exists()) {
-        callback({ id: snapshot.id, ...(snapshot.data() as Omit<UsuarioPerfil, "id">) });
+        callback({ id: snapshot.id, ...(snapshot.data() as Omit<Usuario, "id">) });
       } else {
         callback(null);
       }

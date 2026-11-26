@@ -3,7 +3,7 @@ export type Usuario = {
   id?: string;
   id_usuario: string;
   nome: string;
-  email?: string;
+  email: string;
   pontuacao: number;
   nivel_atual?: number;
   topicos_concluidos: string[];
