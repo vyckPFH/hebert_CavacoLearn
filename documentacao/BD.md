@@ -49,6 +49,7 @@ classDiagram
         +String id_usuario (PK)
         +String nome
         +String email
+        +String tipo
         +Number pontuacao
         +Number nivel_atual
         +List~String~ topicos_concluidos
