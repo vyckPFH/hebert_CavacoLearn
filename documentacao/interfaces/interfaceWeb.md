@@ -71,11 +71,11 @@ O painel é destinado ao administrador do sistema, que cadastra e mantém o cont
 O visual escolhido é o mesmo do aplicativo: escuro, utilizando tons de verde como cor principal. No painel web, a identidade é transmitida apenas pela paleta e pela tipografia, pois o foco do painel é a leitura de listas e o preenchimento de formulários.
 
 Evitamos:
-• imagens ou texturas de fundo;
-• elementos decorativos que disputem atenção com os formulários;
-• muitos elementos luminosos;
-• excesso de cores;
-• animações e/ou elementos que distraiam o administrador.
+- imagens ou texturas de fundo;
+- elementos decorativos que disputem atenção com os formulários;
+- muitos elementos luminosos;
+- excesso de cores;
+- animações e/ou elementos que distraiam o administrador.
 
 ---
 
@@ -139,12 +139,12 @@ A paleta é a mesma do aplicativo, porém os usos foram redefinidos para o conte
 #### Calistoga
 
 A mesma fonte do aplicativo, utilizada em todos os textos do painel, por exemplo:
-• título do cabeçalho;
-• títulos de seção;
-• rótulos dos campos;
-• nomes dos botões;
-• descrição dos itens das listas;
-• mensagens de estado, de erro e de confirmação.
+- título do cabeçalho;
+- títulos de seção;
+- rótulos dos campos;
+- nomes dos botões;
+- descrição dos itens das listas;
+- mensagens de estado, de erro e de confirmação.
 
 ---
 
@@ -166,18 +166,18 @@ section: 72  // 4.5rem
 
 ### Aplicação no painel (valores iniciais, a calibrar durante a implementação):
 
-• entre rótulo e campo: sm (8px);
-• entre campos de um formulário: lg (16px);
-• entre botões de ação de uma mesma linha: xl (24px);
-• entre os botões de um menu (Home e Aulas): xl (24px);
-• espaço interno de cards: xl (24px);
-• espaço interno de linhas de lista: lg (16px) na vertical e xl (24px) na horizontal;
-• entre linhas da lista: md (12px);
-• entre blocos do editor de conteúdo: lg (16px);
-• entre seções (formulário e lista): xxxl (40px);
-• entre o cabeçalho e o conteúdo: huge (56px);
-• margem lateral da página: xxl (32px);
-• entre grandes áreas da tela (por exemplo, o menu e o botão Voltar no canto): section (72px).
+- entre rótulo e campo: sm (8px);
+- entre campos de um formulário: lg (16px);
+- entre botões de ação de uma mesma linha: xl (24px);
+- entre os botões de um menu (Home e Aulas): xl (24px);
+- espaço interno de cards: xl (24px);
+- espaço interno de linhas de lista: lg (16px) na vertical e xl (24px) na horizontal;
+- entre linhas da lista: md (12px);
+- entre blocos do editor de conteúdo: lg (16px);
+- entre seções (formulário e lista): xxxl (40px);
+- entre o cabeçalho e o conteúdo: huge (56px);
+- margem lateral da página: xxl (32px);
+- entre grandes áreas da tela (por exemplo, o menu e o botão Voltar no canto): section (72px).
 
 ---
 
@@ -196,11 +196,11 @@ export const radius = {
 ```
 
 ### Aplicação no painel:
-• sm: botões pequenos dentro de linhas de lista (Editar, Excluir);
-• md: campos de texto longo (áreas de texto dos blocos);
-• lg: cards, blocos do editor e linhas de lista;
-• xl: janela de confirmação;
-• pill: campos de uma linha e botões principais (Entrar, Cadastrar, Voltar, Salvar, Cancelar).
+- sm: botões pequenos dentro de linhas de lista (Editar, Excluir);
+- md: campos de texto longo (áreas de texto dos blocos);
+- lg: cards, blocos do editor e linhas de lista;
+- xl: janela de confirmação;
+- pill: campos de uma linha e botões principais (Entrar, Cadastrar, Voltar, Salvar, Cancelar).
 
 ### Sombras e elevação
 Para destaque e breve sensação de sombreamento e elevação, foram utilizados tons levemente mais claros em torno da delimitação dos componentes principais, como botões e cards, cabeçalhos e blocos informativos.
@@ -215,10 +215,10 @@ Biblioteca escolhida: https://lucide.dev/icons
 
 Ícone escolhido para botão "voltar": https://lucide.dev/icons/arrow-big-left
 
-• Sair: botão de texto "Sair";
-• Excluir: botão de texto "Excluir" (no protótipo, o botão vermelho com "X" é substituído pelo texto);
-• Mover itens: botões de texto "Subir" e "Descer";
-• Títulos: sem elementos de decoração ao lado do texto.
+- Sair: botão de texto "Sair";
+- Excluir: botão de texto "Excluir" (no protótipo, o botão vermelho com "X" é substituído pelo texto);
+- Mover itens: botões de texto "Subir" e "Descer";
+- Títulos: sem elementos de decoração ao lado do texto.
 
 A única exceção são os controles nativos do navegador (como a seta de um campo de seleção), que não são ícones do projeto.
 
@@ -228,9 +228,9 @@ A única exceção são os controles nativos do navegador (como a seta de um cam
 
 Elementos interativos precisam possuir área de clique adequada e espaçamento suficiente para evitar cliques acidentais, especialmente:
 
-• botões Editar e Excluir de cada linha da lista, que ficam separados por espaçamento xl para reduzir o risco de excluir por engano;
-• botões Subir e Descer do editor de blocos e da ordenação de itens;
-• botões de ação dos formulários (Cadastrar, Salvar, Cancelar, Voltar).
+- botões Editar e Excluir de cada linha da lista, que ficam separados por espaçamento xl para reduzir o risco de excluir por engano;
+- botões Subir e Descer do editor de blocos e da ordenação de itens;
+- botões de ação dos formulários (Cadastrar, Salvar, Cancelar, Voltar).
 
 ---
 
@@ -249,57 +249,57 @@ Login
         └── Músicas Registradas
 ```
         
-• A Home e a tela central de Aulas funcionam como menus de botões centralizados.
-• Todas as telas internas possuem o botão Voltar, que retorna à tela anterior.
-• Na Home, no lugar do Voltar, fica o botão Sair, que encerra a sessão.
-• O título do cabeçalho é fixo ("Área do Administrador"); a localização do administrador é indicada pelo "subtítulo", um título da seção dentro da tela (por exemplo, "Nova Missão" e "Missões Cadastradas").
-• O botão Voltar fica no canto inferior direito nos menus (Home e Aulas) e ao lado do botão Cadastrar nas telas de gerenciamento.
+- A Home e a tela central de Aulas funcionam como menus de botões centralizados.
+- Todas as telas internas possuem o botão Voltar, que retorna à tela anterior.
+- Na Home, no lugar do Voltar, fica o botão Sair, que encerra a sessão.
+- O título do cabeçalho é fixo ("Área do Administrador"); a localização do administrador é indicada pelo "subtítulo", um título da seção dentro da tela (por exemplo, "Nova Missão" e "Missões Cadastradas").
+- O botão Voltar fica no canto inferior direito nos menus (Home e Aulas) e ao lado do botão Cadastrar nas telas de gerenciamento.
 
 ---
 
 ## 13. Componentes
 
-### Botão
+### 13.1 Botão
 
 Preenchimento botoes, borda bordas, texto titulo, formato pill. Utilizado em menus, formulários e navegação.
 
-### Botão pequeno de linha
+### 13.2 Botão pequeno de linha
 
 Versão reduzida do botão, formato sm, utilizada dentro das linhas das listas (Editar).
 
-### Botão destrutivo
+### 13.3 Botão destrutivo
 Preenchimento destructive, borda destructiveBordas, texto destructiveTexto. Utilizado em Sair e Excluir, e no botão de confirmação da janela de exclusão. É o único componente que utiliza o vermelho, para que o administrador reconheça imediatamente as ações irreversíveis.
 
-### Campo de preenchimento
+### 13.4 Campo de preenchimento
 
 Rótulo acima do campo, em titulo. Fundo campoInput, borda bordaInput, texto de exemplo em placeholder. Em caso de erro, a mensagem aparece logo abaixo do campo em destructiveTexto. Variações:
-• campo de texto de uma linha (pill);
-• campo numérico (recompensa, pontos de desbloqueio, ordem);
-• campo de senha;
-• área de texto (md), utilizada nos blocos de texto;
-• campo de seleção (nível de um tópico ou exercício, tipo de bloco), com a mesma aparência dos campos de texto.
+- campo de texto de uma linha (pill);
+- campo numérico (recompensa, pontos de desbloqueio, ordem);
+- campo de senha;
+- área de texto (md), utilizada nos blocos de texto;
+- campo de seleção (nível de um tópico ou exercício, tipo de bloco), com a mesma aparência dos campos de texto.
 
-### Card e faixa de seção
+### 13.5 Card e faixa de seção
 
 Fundo cards, borda bordas, formato lg. A faixa de título de seção usa o mesmo fundo cards, com texto titulo.
 
-### Linha de lista
+### 13.6 Linha de lista
 
 Cada item cadastrado é uma linha com:
-• à esquerda, a descrição do item (titulo) e uma informação secundária (subTitulo);
-• à direita, os botões Editar e Excluir.
+- à esquerda, a descrição do item (titulo) e uma informação secundária (subTitulo);
+-  à direita, os botões Editar e Excluir.
 
 ```ts
 Completa 1 exercício diariamente.                  [ Editar ] [ Excluir ]
   Recompensa: 10 pontos.
 ```
 
-### Editor de blocos
+### 13.7 Editor de blocos
 
 Usado em tópicos, exercícios e músicas. O conteúdo é uma lista de blocos ordenados, cada um exibido como um card com:
-• cabeçalho com a posição e o tipo do bloco (por exemplo, "Bloco 2 — Texto");
-• campos específicos do tipo;
-• botões Subir, Descer e Excluir bloco.
+- cabeçalho com a posição e o tipo do bloco (por exemplo, "Bloco 2 — Texto");
+- campos específicos do tipo;
+- botões Subir, Descer e Excluir bloco.
 
 | Tipo | Campos |
 | :--- | :--- |
@@ -312,10 +312,102 @@ Usado em tópicos, exercícios e músicas. O conteúdo é uma lista de blocos or
 
 Ao final da lista, o administrador escolhe o tipo em um campo de seleção e usa o botão "Adicionar bloco". A lista de tipos deve ser montada a partir dos tipos suportados pelo sistema, de modo que novos tipos possam ser incluídos sem reformular a tela. A ordem dos blocos na tela é exatamente a ordem em que o aluno verá o conteúdo.
 
-### Janela de confirmação
+### 13.7 Janela de confirmação
 
 Card com borda bordas, formato xl, centralizado sobre a tela escurecida. Contém uma pergunta, uma frase de apoio e dois botões: Excluir (destrutivo) e Cancelar.
 
 ---
 
-## 
+## 14. Telas
+
+### 14.1 Login
+
+Cabeçalho "Área do Administrador" em cards. Abaixo, sobre fundo preto e centralizados:
+- campo Gmail do Adm;
+- campo Senha;
+- botão Entrar;
+- link de texto Cadastrar.
+
+Credenciais inválidas, campos vazios e falhas de comunicação exibem mensagem abaixo dos campos, e o administrador permanece na tela.
+
+### 14.2 Cadastro
+
+Mesma estrutura da tela de login, em dimensões diferentes, com os campos Gmail, Senha e Confirmar senha, botão "Cadastrar" e botão "Voltar". Em caso de sucesso, o sistema retorna ao login com mensagem de confirmação.
+
+### 14.3 Home
+
+Cabeçalho e quatro botões centralizados, em coluna: Aulas Registradas, Missões Registradas, Usuários Registrados e Músicas Registradas. O botão Sair (destrutivo) fica no canto inferior direito.
+
+### 14.4 Aulas Registradas
+
+Três botões centralizados: Níveis Registrados, Tópicos Registrados e Exercícios Registrados. O botão Voltar fica no canto inferior direito.
+
+---
+
+## 15. Estados de interface
+
+Todo componente que depende de dados deve considerar pelo menos:
+
+```text
+Loading
+Success
+Empty
+Error
+```
+
+---
+
+### Empty State
+
+Quando não houver conteúdo, o estado vazio explica o que está vazio e o que o administrador pode fazer:
+
+```ts
+Nenhuma missão cadastrada.
+
+Use o formulário acima para cadastrar a primeira missão.
+```
+
+O Empty State explica:
+
+- o que está vazio;
+- por que pode estar vazio;
+- o que o usuário pode fazer.
+
+---
+
+### Error State
+
+Erro de comunicação:
+
+```ts
+Não foi possível carregar este conteúdo.
+
+Verifique sua conexão e tente novamente.
+
+[ TENTAR NOVAMENTE ]
+```
+
+Erro ao gravar (cadastrar, editar, excluir ou ordenar):
+
+```ts
+Não foi possível concluir a operação.
+
+Nenhuma alteração foi feita. Verifique sua conexão e tente novamente.
+```
+
+- Sessão inválida: o administrador é direcionado para a tela de login.
+
+Exclusão com dependências:
+
+Quando o item possui itens associados (por exemplo, um nível com tópicos, um tópico com exercícios ou músicas e exercícios com registros de alunos), o sistema verifica as dependências antes de excluir e informa o motivo:
+
+```ts
+Não foi possível excluir este nível.
+
+Ele possui tópicos ou exercícios associados.
+Remova ou mova esses itens antes de excluí-lo.
+```
+
+
+
+
