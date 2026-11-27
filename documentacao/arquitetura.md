@@ -223,52 +223,225 @@ A organização interna do sistema utiliza camadas com responsabilidades distint
 
 Responsável pela apresentação das informações ao usuário e pela interação com as funcionalidades do sistema.
 
-No aplicativo Mobile, a organização prevista contempla:
+No aplicativo Mobile, a organização contempla:
 
 - `telas/`: reúne as telas completas do aplicativo, associadas aos fluxos de navegação.
 - `componentes/`: reúne componentes reutilizáveis da interface, como botões, campos de entrada e outros elementos visuais.
 
-Esses diretórios fazem parte da organização arquitetural descrita na documentação, mas não foram identificados na estrutura de código disponibilizada para análise.
+No painel Web, esta camada é responsável pela apresentação das funcionalidades administrativas, incluindo suas páginas, componentes visuais e elementos de interação. 
+A organização contempla:
 
-No painel Web, esta camada será responsável pela apresentação das funcionalidades administrativas, incluindo suas páginas, componentes visuais e elementos de interação.
-
-**Organização do painel Web:**
-
-```text
-[Diretórios de interface do painel Web]
-├── [Páginas]
-├── [Componentes]
-└── [Elementos de navegação]
-```
-
-A estrutura definitiva será preenchida após a análise do código do painel.
+- ``:
+- ``: 
 
 ### 6.2. Camada de serviços
 
 Responsável por concentrar operações relacionadas às funcionalidades do sistema e à comunicação com serviços externos.
 
-No aplicativo analisado, essa responsabilidade é representada principalmente pela pasta `src/services/`, que contém os arquivos responsáveis pelas operações com usuários, níveis, tópicos, exercícios e músicas, além da configuração do Firebase.
+Essa responsabilidade é representada principalmente pela pasta `src/services/`, que contém os arquivos responsáveis pelas operações com usuários, níveis, tópicos, exercícios e músicas, além da configuração do Firebase.
 
-No painel Web, os serviços responsáveis pelas operações administrativas serão documentados neste espaço após sua implementação.
+No painel web, não existe necessariamente uma camada de serviços.
 
 ### 6.3. Camada de tipos
 
-Responsável por definir interfaces, tipos e estruturas de dados utilizados pelas funcionalidades do sistema.
+Responsável por definir interfaces, tipos e estruturas de dados utilizados pelas funcionalidades do sistema mobile. É representada pela pasta `src/types/`.
 
-No aplicativo, essa responsabilidade é representada pela pasta `src/types/`, que contém as definições de tipos relacionadas aos principais elementos do sistema.
-
-A utilização de tipos compartilhados entre o Mobile e o Web será descrita após a análise das respectivas implementações.
+No painel web, não existe necessariamente uma camada de tipos.
 
 ### 6.4. Camada de utilitários
 
-Prevista para concentrar funções auxiliares e reutilizáveis, como formatações, conversões e outras operações que possam ser utilizadas em diferentes partes do sistema.
+Contém funções auxiliares e reutilizáveis, como formatações, conversões e outras operações que possam ser utilizadas em diferentes partes do sistema. É representada pela pasta `utils/`.
 
-A pasta `utils/` está prevista na organização arquitetural do aplicativo, mas não foi identificada no código disponibilizado.
-
-Os utilitários do painel Web e possíveis recursos compartilhados serão acrescentados nesta seção conforme a estrutura final do projeto.
+No painel web, não existe necessariamente uma camada de utilitários.
 
 ### 6.5. Camada de recursos visuais
 
-Representada pela pasta `assets/` no aplicativo Mobile, responsável por armazenar imagens, fontes e demais recursos utilizados na apresentação visual do aplicativo.
+Representada pela pasta `assets/` no sistema mobile, responsável por armazenar imagens, fontes e demais recursos utilizados na apresentação visual do aplicativo. 
 
-Os recursos visuais utilizados pelo painel Web serão documentados separadamente após a análise de sua estrutura.
+### 6.6. Camada de [...]
+
+---
+
+## 7. Integração com o Firebase
+
+O aplicativo utiliza o Firebase como infraestrutura de autenticação e armazenamento de dados.
+
+A configuração dos serviços está no arquivo `src/services/firebase.ts`.
+
+### 7.1. Firebase Authentication
+
+O Firebase Authentication é utilizado para gerenciar a autenticação dos usuários.
+
+A configuração considera ambientes Web e React Native. No ambiente React Native, é utilizada a persistência de autenticação com AsyncStorage, permitindo manter o estado de autenticação entre inicializações do aplicativo.
+
+### 7.2. Cloud Firestore
+
+O Cloud Firestore é utilizado como banco de dados para armazenar as informações do sistema.
+
+Os serviços utilizam operações disponibilizadas pelo SDK do Firebase, como `collection`, `doc`, `getDoc`, `getDocs`, `addDoc`, `setDoc`, `updateDoc`, `deleteDoc`, `query`, `where`, e `orderBy`.
+
+### 7.3. Integração do painel Web com o Firebase
+
+**[A ser preenchido após a implementação e análise do painel Web.]**
+
+Nesta seção serão descritos:
+
+- A configuração do Firebase no painel Web.
+- Os recursos de autenticação utilizados.
+- A comunicação com o Cloud Firestore.
+- As operações de leitura e escrita realizadas pelo painel.
+- A relação entre as operações administrativas e os dados consumidos pelo aplicativo Mobile.
+
+### 7.4. Integração compartilhada entre os módulos
+
+**[A ser preenchido caso sejam identificadas configurações ou serviços compartilhados entre Mobile e Web.]**
+
+---
+
+## 8. Organização dos blocos de conteúdo
+
+O projeto possui definições de tipos para organizar os blocos de conteúdo utilizados no aplicativo. Essas definições estão concentradas principalmente no arquivo `src/types/bloco.ts`.
+
+Entre os tipos de bloco identificados estão:
+
+- `texto`;
+- `diagrama_acorde`;
+- `audio`;
+- `video`;
+- `cifra`;
+- `enunciado`.
+
+A estrutura `BlocoConteudo` permite representar informações relacionadas ao conteúdo, como tipo, ordem e configuração, sendo possível definir diferentes formatos de conteúdo dentro da estrutura de aprendizagem. 
+
+### 8.1. Gerenciamento dos blocos pelo painel Web
+
+**[A ser preenchido após a implementação do painel Web.]**
+
+Nesta seção será descrita a forma como os blocos de conteúdo serão cadastrados, editados, organizados e disponibilizados por meio do painel administrativo.
+
+Também será documentada a relação entre a estrutura dos blocos cadastrados no painel e os tipos de dados utilizados pelo aplicativo Mobile.
+
+---
+
+## 9. Fluxo de dados e funcionamento dos serviços
+
+A comunicação entre o aplicativo e o banco de dados ocorre por meio dos serviços implementados na pasta `src/services/`.
+
+De maneira geral, o fluxo de dados acontece da seguinte forma:
+
+1. Uma funcionalidade do aplicativo solicita uma operação.
+2. O serviço correspondente recebe a solicitação.
+3. O serviço utiliza o SDK do Firebase para realizar a operação necessária.
+4. O Firebase executa a leitura ou escrita dos dados.
+5. O resultado da operação é retornado ao aplicativo.
+
+### 9.1. Operações relacionadas aos níveis, tópicos e exercícios
+
+Os arquivos `niveis.ts`, `topicos.ts` e `exercicios.ts` concentram operações relacionadas à obtenção e ao gerenciamento dos dados desses elementos.
+
+### 9.2. Operações relacionadas aos usuários
+
+O arquivo `usuarios.ts` concentra operações relacionadas aos perfis dos usuários e ao acompanhamento do progresso.
+
+Entre as operações gerais estão:
+
+- Obtenção ou criação de perfil.
+- Sincronização de informações do perfil.
+- Registro de conclusão de tópicos.
+- Registro de conclusão de exercícios.
+- Atualização da pontuação.
+- Resgate de missões.
+- Desbloqueio de músicas.
+
+As operações de conclusão de tópicos e exercícios possuem valores padrão de pontuação definidos no serviço.
+
+### 9.3. Fluxo de dados do painel Web
+
+**[A ser preenchido após a implementação e análise do painel Web.]**
+
+Nesta seção será apresentado o fluxo das operações administrativas, desde a interação do administrador com a interface até a execução das operações nos serviços e no banco de dados.
+
+### 9.4. Comunicação entre Mobile e Web
+
+**[A ser preenchido após a análise dos dois módulos.]**
+
+Nesta seção será documentada a relação entre o painel administrativo e o aplicativo móvel, considerando a criação, atualização, consulta e utilização dos dados do sistema.
+
+---
+
+## 10. Dependências do aplicativo mobile
+
+As dependências utilizadas pelo aplicativo são declaradas no arquivo `package.json`, localizado na pasta do projeto mobile.
+
+Entre as principais tecnologias e bibliotecas utilizadas estão:
+
+- React Native: desenvolvimento da aplicação móvel.
+- Expo: ferramentas e ambiente de desenvolvimento.
+- TypeScript: tipagem estática do código.
+- Firebase: serviços de autenticação e armazenamento.
+- AsyncStorage: persistência local utilizada na configuração da autenticação no ambiente React Native.
+
+As bibliotecas instaladas ficam disponíveis na pasta `node_modules/`, gerada durante a instalação das dependências.
+
+## 11. Dependências do painel web
+
+**[A ser preenchido após a implementação do painel Web.]**
+
+Nesta seção serão apresentadas as bibliotecas, dependências e ferramentas declaradas no projeto Web.
+
+### 10.2. Dependências compartilhadas
+
+**[A ser preenchido caso sejam identificadas dependências utilizadas por mais de um módulo.]**
+
+---
+
+## 11. Padrões de nomenclatura
+
+O projeto adota padrões de nomenclatura para facilitar a identificação de pastas, arquivos, classes e demais elementos do código.
+
+Os padrões definidos são:
+
+- **Pastas:** a primeira letra deve ser minúscula.
+- **Classes:** a primeira letra deve ser maiúscula.
+- **Variáveis e funções:** utilização do padrão `lowerCamelCase`.
+- **Arquivos:** nomes descritivos, preferencialmente em letras minúsculas, podendo utilizar underline (`_`) em alguns casos.
+
+Exemplos:
+
+| Elemento | Exemplo |
+| -------- | ---------------------- |
+| Pasta | `services/` |
+| Pasta | `componentes/` |
+| Classe | `UsuarioPerfil` |
+| Variável | `nomeUsuario` |
+| Função | `obterPerfil()` |
+| Arquivo | `usuarios.ts` |
+| Arquivo | `regras_de_negocio.md` |
+
+A adoção desses padrões busca manter a consistência e facilitar a manutenção do projeto.
+
+Os padrões de nomenclatura utilizados no painel Web são os mesmos.
+
+---
+
+## 12. Configuração do aplicativo
+
+A configuração do ambiente de desenvolvimento está distribuída entre os arquivos principais do projeto:
+
+- `app.json`: configurações do Expo.
+- `package.json`: dependências e scripts.
+- `tsconfig.json`: configurações do TypeScript.
+- `index.ts`: ponto de entrada da aplicação.
+- `App.tsx`: componente raiz do aplicativo.
+
+Esses arquivos permitem configurar e executar o aplicativo dentro do ambiente definido pelo Expo e pelo React Native.
+
+## 13. Configuração do painel Web
+
+**[A ser preenchido após a implementação do painel Web.]**
+
+Nesta seção serão descritos os arquivos de configuração do ambiente Web, incluindo o ponto de entrada, as configurações do projeto, os scripts e os demais parâmetros necessários para sua execução.
+
+### 14. Configuração de integração entre os módulos
+
+**[A ser preenchido caso existam configurações específicas para a comunicação ou utilização conjunta dos módulos Mobile e Web.]**
