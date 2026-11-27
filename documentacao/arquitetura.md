@@ -40,6 +40,7 @@ CavacoLearn/
 │   │   │   ├── componentes/
 │   │   │   └── services/
 │   │   │   └── telas/
+│   │   │   └── theme/
 │   │   │   └── types/
 │   │   │   └── utils/
 │   ├── Cavaco_Learn-Web/
